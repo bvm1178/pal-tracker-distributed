@@ -29,6 +29,7 @@ run:
 
       mysql -uroot < databases/create_databases.sql
 
+      apt-get -y install dos2unix
       dos2unix gradlew
       ./gradlew testMigrate clean build || (service mysql stop && exit 1)
 
