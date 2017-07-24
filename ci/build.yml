@@ -30,7 +30,7 @@ run:
       mysql -uroot < databases/create_databases.sql
 
       chmod a+x gradlew
-      gradlew testMigrate clean build || (service mysql stop && exit 1)
+      ./gradlew testMigrate clean build || (service mysql stop && exit 1)
 
       cp applications/allocations-server/build/libs/allocations-server.jar ../build-output/allocations-server-`cat ../version/number`.jar
       cp applications/backlog-server/build/libs/backlog-server.jar ../build-output/backlog-server-`cat ../version/number`.jar
