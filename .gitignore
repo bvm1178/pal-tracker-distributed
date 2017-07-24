@@ -7,3 +7,9 @@ build
 .DS_Store
 .env
 ci/variables.yml
+.project
+*/.project
+.settings
+*/.settings
+.classpath
+*/.classpath
