@@ -29,6 +29,7 @@ run:
 
       mysql -uroot < databases/create_databases.sql
 
+      ls
       chmod a+x ./gradlew
       ./gradlew testMigrate clean build || (service mysql stop && exit 1)
 
