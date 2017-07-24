@@ -29,9 +29,7 @@ run:
 
       mysql -uroot < databases/create_databases.sql
 
-      ls
-      chmod u+x gradlew
-      ls -l gradlew
+      dos2unix gradlew
       ./gradlew testMigrate clean build || (service mysql stop && exit 1)
 
       cp applications/allocations-server/build/libs/allocations-server.jar ../build-output/allocations-server-`cat ../version/number`.jar
